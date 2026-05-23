@@ -12,8 +12,8 @@ router.post("/add",async(req,res)=>{
 })
 
 router.get("/alluser" , async(req,res)=>{
-    const alldata = await Users.find()
-    res.send(alldata)
+    const alldata = await Users.find({})
+    res.send({"users" : alldata})
 })
 
 router.delete("/delete/:id" , async (req,res)=>{
