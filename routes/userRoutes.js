@@ -11,7 +11,7 @@ router.post("/add",async(req,res)=>{
   }
 })
 
-router.get("/alluser", Verifuser , async(req,res)=>{
+router.get("/alluser" , async(req,res)=>{
     const alldata = await Users.find()
     res.send(alldata)
 })
